@@ -14,7 +14,7 @@ namespace larlite{
   {
     event_base::clear_data();
     //for(auto& ass : _ass_data) ass.clear();
-    _ass_map_key.clear();
+    _ass_map_key.clear(); // May need to comment out
     _ass_data.clear();
     _ass_ids.clear();
   }

@@ -43,6 +43,9 @@
 #include "PiZeroROI.h"
 #include "auxsimch.h"
 #include "chstatus.h"
+#include "wrapper.h"
+#include "lardataobj/RecoBase/Hit.h"
+#include "lardataobj/RecoBase/Cluster.h"
 
 namespace larlite {
 
@@ -1185,6 +1188,13 @@ namespace larlite {
     case data::kChStatus:
       _ptr_data_array[type][name]=new event_chstatus(name);
       break;
+    case data::kLarSoftHit:
+      _ptr_data_array[type][name]=new wrapper<std::vector<recob::Hit> >(name);
+      break;
+    case data::kLarSoftCluster:
+      _ptr_data_array[type][name]=new wrapper<std::vector<recob::Cluster> >(name);
+      break;
+
     default:
       print(msg::kERROR,__FUNCTION__,Form("Event-data identifier not supported: %d",(int)type));
       break;

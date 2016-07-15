@@ -94,7 +94,9 @@ namespace larlite{
       kPiZeroROI,
       kAuxDetSimChannel,   ///< sim::AuxDetSimChannel
       kChStatus,           ///< larlite::chstatus
-      kDATA_TYPE_MAX       ///< Event-wise enum boundary
+      kLarSoftHit,         ///< recob::hit LARSOFT Data Product
+      kLarSoftCluster,      ///< recob::cluster LARSOFT Data Product
+      kDATA_TYPE_MAX      ///< Event-wise enum boundary
     };
 
     enum RunDataType_t {
@@ -156,7 +158,9 @@ namespace larlite{
       "mucsreco",
       "PiZeroROI",
       "auxsimch",
-      "chstatus"
+      "chstatus",
+      "larsofthit",
+      "larsoftcluster"
     };
 
     const std::string kRUNDATA_TREE_NAME[kRUNDATA_TYPE_MAX] = {

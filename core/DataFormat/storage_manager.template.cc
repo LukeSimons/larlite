@@ -3,8 +3,9 @@
 //#include "storage_manager.h"
 //#include "storage_manager.h"
 #include "event_ass.h"
-namespace larlite {
 
+
+/*
   template<> data::DataType_t storage_manager::data_type<trigger> () const
   { return data::kTrigger; }
 
@@ -154,7 +155,8 @@ namespace larlite {
     throw std::exception();
     return data::kRUNDATA_Undefined;
   }
-
+*/
+namespace larlite {
   //template<> data::DataType_t storage_manager::data_type<event_trigger> () const
   //{ return data::kTrigger; }
 

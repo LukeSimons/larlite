@@ -1,9 +1,12 @@
 # Include your header file location
 CXXFLAGS += -I$(LARLITE_COREDIR)
+CXXFLAGS += -I$(LARDATAOBJ_INC) -I$(LARCOREOBJ_INC)
 CXXFLAGS += -I. $(shell root-config --cflags) -g
 
 # Include your shared object lib location
 LDFLAGS += -L$(LARLITE_LIBDIR) -lLArLite_DataFormat -lLArLite_Base 
+LDFLAGS += -lLArLite_WrappedLarSoftDictionaries
+LDFLAGS += -L$(LARDATAOBJ_LIB) -llardataobj_RecoBase_dict -llardataobj_RecoBase
 LDFLAGS += $(shell root-config --libs) -lPhysics -lMatrix -g
 
 # platform-specific options

@@ -3,8 +3,8 @@
 #
 
 # specific names for this package
-DICT  = LArLite_DataFormatDict
-SHLIB = libLArLite_DataFormat.so
+DICT  = LArLite_WrappedLarSoftDictionaries
+SHLIB = libLArLite_WrappedLarSoftDictionaries.so
 SOURCES = $(filter-out $(DICT).cxx, $(wildcard *.cxx))
 FMWK_HEADERS = LinkDef.h $(DICT).h
 HEADERS = $(filter-out $(FMWK_HEADERS), $(wildcard *.h))
@@ -13,8 +13,8 @@ OBJECTS = $(SOURCES:.cxx=.o)
 # include options for this package
 INCFLAGS  = -I. 
 INCFLAGS += -I$(LARLITE_COREDIR)
-INCFLAGS += -I$(LARCOREOBJ_INC)
 INCFLAGS += -I$(LARDATAOBJ_INC)
+INCFLAGS += -I$(LARCOREOBJ_INC)
 
 # platform-specific options
 OSNAME          = $(shell uname -s)
