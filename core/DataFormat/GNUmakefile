@@ -13,8 +13,8 @@ OBJECTS = $(SOURCES:.cxx=.o)
 # include options for this package
 INCFLAGS  = -I. 
 INCFLAGS += -I$(LARLITE_COREDIR)
-INCFLAGS += -I$(LARCOREOBJ_INC)
 INCFLAGS += -I$(LARDATAOBJ_INC)
+INCFLAGS += -I$(LARCOREOBJ_INC)
 
 # platform-specific options
 OSNAME          = $(shell uname -s)

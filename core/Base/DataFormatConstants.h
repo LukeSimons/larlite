@@ -95,8 +95,8 @@ namespace larlite{
       kAuxDetSimChannel,   ///< sim::AuxDetSimChannel
       kChStatus,           ///< larlite::chstatus
       kLarSoftHit,         ///< recob::hit LARSOFT Data Product
-      kLarSoftCluster,      ///< recob::cluster LARSOFT Data Product
-      kDATA_TYPE_MAX      ///< Event-wise enum boundary
+      kLarSoftCluster,     ///< recob::cluster LARSOFT Data Product
+      kDATA_TYPE_MAX       ///< Event-wise enum boundary
     };
 
     enum RunDataType_t {

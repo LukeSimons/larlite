@@ -39,6 +39,7 @@ namespace std {} using namespace std;
 
 // Header files passed as explicit arguments
 #include "classes.h"
+#include "dummyWrappedLarSoftDictionaries.h"
 
 // Header files passed via #pragma extra_include
 
@@ -308,6 +309,7 @@ namespace {
   void TriggerDictionaryInitialization_libLArLite_WrappedLarSoftDictionaries_Impl() {
     static const char* headers[] = {
 "classes.h",
+"dummyWrappedLarSoftDictionaries.h",
 0
     };
     static const char* includePaths[] = {
@@ -338,6 +340,7 @@ namespace recob{class __attribute__((annotate("$clingAutoload$classes.h")))  Clu
 
 #define _BACKWARD_BACKWARD_WARNING_H
 #include "classes.h"
+#include "dummyWrappedLarSoftDictionaries.h"
 
 #undef  _BACKWARD_BACKWARD_WARNING_H
 )DICTPAYLOAD";
